@@ -71,3 +71,6 @@ deploy:
   type: github
   repository: https://github.com/keyfoxth/keyfoxth.github.io.git
   branch: master
+
+# Google analytics
+google_analytics: UA-68643530-1
