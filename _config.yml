@@ -72,5 +72,24 @@ deploy:
   repository: https://github.com/keyfoxth/keyfoxth.github.io.git
   branch: master
 
-# Google analytics
+# RSS
+feed:
+  type: rss2
+  path: rss2.xml
+  limit: 10
+
+# Since
+since: 2015
+
+# Avatar
+avatar: /images/avatar.jpg
+
+# Social links
+social:
+  github: https://github.com/keyfoxth
+
+# Google Analytics
 google_analytics: UA-68643530-1
+
+# Disqus
+disqus_shortname: keyfoxth
