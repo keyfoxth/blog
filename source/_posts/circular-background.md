@@ -1,18 +1,19 @@
 title: 一个简洁的循环背景
 date: 2015-10-23 18:36:32
 tags:
-categories: Web
+- background
+categories: web
 ---
 
-> 15-10-24 第 2 次更新
+> 15-10-25 第 4 次更新
 
 ---
 
-不多说，直接上 [DEMO](circular-background-demo.html)。
+不多说，直接上 [DEMO](http://keyfoxth.github.io/demo/circular-background-demo.html)。
 
-实现的方法其实很简单，但在此之前，先介绍一些新的 CSS 长度值单位：
+实现的方法其实很简单，但在此之前，先介绍一些新的 CSS 长度值单位。
 
-> **vw**、**vh**、**nmin**、**vmax**
+### vw、vh、nmin、vmax
 
 这些都是 CSS3 的新单位，在 W3C Editor's Draft 中是这样定义的：
 
@@ -34,8 +35,8 @@ categories: Web
 
 > 1vw = 1% viewport width（视窗宽度）
 > 1vh = 1% viewport height（视窗高度）
-> 1vmin = 1vw or 1vh（取决于那个跟小）
-> 1vmax = 1vw or 1vh（取决于那个跟大）
+> 1vmin = 1vw or 1vh（取决于那个更小）
+> 1vmax = 1vw or 1vh（取决于那个更大）
 
 <!-- more -->
 
@@ -48,11 +49,12 @@ categories: Web
   font-size: 5vmin; /*高级浏览器*/
 }
 ```
-------
+
+---
 
 ### 背景位置与大小
 
-写一个 `<div class="bg"></div>`
+`<div class="bg"></div>`
 
 ```CSS
 .bg {
@@ -71,7 +73,7 @@ categories: Web
 1. 通过绝对定位确定高度
 2. 让页面不显示滚动条
 
-`width: 200vh; background-size: auto 100%;`（这里使用的图片大小为 2160*1080）
+`width: 200vh; background-size: auto 100%;`（这里使用的图片大小为 2160\*1080）
 
 1. 固定背景图片的宽高比
 2. 实现图片高度自适应
@@ -81,7 +83,7 @@ categories: Web
 
 ### 无缝循环
 
-为了保证无缝循环，必须给 `<div class="bg"></div>` 设置一个 `::after` 伪对象
+为了保证无缝循环，必须给 `<div class="bg"></div>` 设置一个 `::after` 伪对象：
 
 ```CSS
 .bg::after {
@@ -96,7 +98,7 @@ categories: Web
 }
 ```
 
-至于怎么让页面滚动起来，直接给 `<div class="bg"></div>` 写个 `animation` 就行了
+至于怎么让页面滚动起来，直接给 `<div class="bg"></div>` 写个 `animation` 就行了：
 
 ```CSS
 .bg {
@@ -131,7 +133,7 @@ categories: Web
 
 `<div class="content"></div>`
 
-居中的方法很多很多，这只是其中一种比较新颖的
+居中的方法很多很多，这只是其中一种比较新颖的：
 
 ```CSS
 .content {
@@ -145,7 +147,7 @@ categories: Web
 }
 ```
 
-里面的文字也要水平居中
+里面的文字也要水平居中：
 
 ```CSS
 .content {
@@ -155,7 +157,7 @@ categories: Web
 
 ### 其它效果
 
-给文字来点阴影
+给文字来点阴影：
 
 ```CSS
 .content {
@@ -166,7 +168,7 @@ categories: Web
 }
 ```
 
-不能选中文本内容
+不能选中文本内容：
 
 ```CSS
 .content {
@@ -176,3 +178,23 @@ categories: Web
   user-select:         none;
 }
 ```
+
+### 总结与不足
+
+为什么一直省略 `background-image` 属性？没错，这里使用了上篇文章介绍的 **Data URIs**，将图片进行 base64 编码后一共 8660 字节，通过把它写在 CSS 中实现复用，整个 HTML 则 11237 字节（10.9KB）。
+
+当然，这里也还有不足之处。
+
+因为这里使用的图片大小是 2160\*1080，当视窗宽高比大于 2:1（18:9）时，在背景滚动到 `.bg::after` 的最右边后将有一段 `window.innerWidth - window.innerHeight * 2` 的白边。
+
+解决办法有两个：
+
+1. 使用宽高比更大的图片 : )
+2. 将 `.bg, .bg::after` 中的 `width` 设置为 `200 * n（n 为大于1的整数）vh`，让 `background` 平铺过去。不能是其它数或直接使用 `width: 100%;`，因为这样会撕裂 `background`，不是无缝循环。
+
+---
+
+### 参考链接
+
+1. [CSS Values and Units Module Level 3](https://drafts.csswg.org/css-values-3/#viewport-relative-lengths)
+2. [Viewport Sized Typography | CSS-Tricks](https://css-tricks.com/viewport-sized-typography/)
