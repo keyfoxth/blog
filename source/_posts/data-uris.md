@@ -55,6 +55,8 @@ window.open("data:text/html;charset=utf-8," +
 );
 ```
 
+<!-- more -->
+
 ### 实例
 
 [DEMO](data:text/html;charset=UTF-8,Hello, world!) []()
