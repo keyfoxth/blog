@@ -6,7 +6,7 @@ tags:
 categories: CSS
 ---
 
-> 15-10-26 第 4 次更新
+> 15-10-27 第 5 次更新
 
 ---
 
@@ -23,8 +23,13 @@ data URIs 由 [RFC 2397](http://tools.ietf.org/html/rfc2397) 定义，允许将�
 1. `data:` 协议头，标识这是一个 data URI 资源。
 2. `[<media type>]` 数据呈现的格式，例如 `image/gif` 代表 gif 图像文件，如果没有指定，默认是 `text/plain`。
 3. `[;charset=<character set>]` 可选的字符集参数，如果没有指定，默认是 `US-ASCII`。
-4. `[;base64]` 可选的数据编码方式，存在时，表示 `<data>` 是 base64 编码过的二进制数据。
-5. `<data>` 实际的数据内容，八比特的字符序列。
+4. `[;base64]` 可选的数据编码方式，存在时，表示 `<data>` 是 Base64 编码过的二进制数据。
+5. `<data>` 实际的数据内容，8bit 的字符序列。
+
+> **`Base64`**
+>
+> 由 [RFC 2045](https://www.ietf.org/rfc/rfc2045.txt) 定义的二进制数据表示方法。
+> 简单来说，就是将 3Byte 的数据，转换为 4 个 6bit 单元，每个单元都按照其值，选择 Base64 索引表中对应的字符作为编码后的输出。也就是说，3Byte 的数据经过 Base64 编码后，将增大到 4Byte。
 
 ### 用法
 
