@@ -31,6 +31,8 @@ data URIs 由 [RFC 2397](http://tools.ietf.org/html/rfc2397) 定义，允许将�
 > 由 [RFC 2045](https://www.ietf.org/rfc/rfc2045.txt) 定义的二进制数据表示方法。
 > 简单来说，就是将 3Byte 的数据，转换为 4 个 6bit 单元，每个单元都按照其值，选择 Base64 索引表中对应的字符作为编码后的输出。也就是说，3Byte 的数据经过 Base64 编码后，将增大到 4Byte。
 
+<!-- more -->
+
 ### 用法
 
 在 HTML 中：
@@ -60,8 +62,6 @@ window.open("data:text/html;charset=utf-8," +
   )
 );
 ```
-
-<!-- more -->
 
 ### 实例
 
