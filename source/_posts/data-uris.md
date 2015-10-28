@@ -24,12 +24,12 @@ Data URIs 由 [RFC 2397](http://tools.ietf.org/html/rfc2397) 定义，允许将�
 2. `[<media type>]` 数据呈现的格式，例如 `image/gif` 代表 gif 图像文件，如果没有指定，默认是 `text/plain`。
 3. `[;charset=<character set>]` 可选的字符集参数，如果没有指定，默认是 `US-ASCII`。
 4. `[;base64]` 可选的数据编码方式，存在时，表示 `<data>` 是 Base64 编码过的二进制数据。
-5. `<data>` 实际的数据内容，8bit 的字符序列。
+5. `<data>` 实际的数据内容，8 bit 的字符序列。
 
 > **`Base64`**
 >
 > 由 [RFC 1421](https://tools.ietf.org/html/rfc1421)、[RFC 2045](https://www.ietf.org/rfc/rfc2045.txt) 定义的二进制数据编码方法。
-> 简单来说，就是将 3Bytes 的数据，转换为 4 个 6bit 单元，每个单元都按照其值，选择 Base64 索引表中对应的字符作为编码后的输出。也就是说，3Bytes 的数据经过 Base64 编码后，将增大到 4Bytes。
+> 简单来说，就是将 3 Bytes 的数据，转换为 4 个 6 bit 单元，每个单元都按照其值，选择 Base64 索引表中对应的字符作为编码后的输出。也就是说，3 Bytes 的数据经过 Base64 编码后，将增大到 4 Bytes。
 
 <!-- more -->
 
@@ -79,13 +79,19 @@ window.open("data:text/html;charset=utf-8," +
 
 ### 缺点
 
-1. 因为 Base64 的的实际原理，编码后的数据比原始数据约长 1/3，不过这点可以通过 gzip 等方法改善。
+1. 因为 Base64 的的实际原理，编码后的数据比原始数据约大 1/3，不过这点可以通过 gzip 等方法改善。
+> 以上面那张 Loading 图为例
+> 原始的 `.gif` 图片信息：5369 Bytes
+> 使用 base64 编码后得到的 `.gif.txt`：7182 Bytes
+> 使用 gzip 压缩 `.gif.txt` 后得到的 `.gif.txt.gz`：4353 Bytes
+> 直接对原图使用 gzip 压缩得到的 `.gif.gz`：4054 Bytes
+
 2. 需要额外的解码、渲染过程，消耗更多资源。
 3. 兼容性问题：例如 IE8 限制 Data URIs 的长度最多为 32768 Bytes。
 
 ### 总结
 
-Data URIs 是把双刃剑，有利亦有弊。
+Data URIs 是把双刃剑，有利亦有弊。至于用不用，那就仁者见仁，智者见智啦。
 
 最后，推荐一下 webpack，其中的 [url-loader](https://github.com/webpack/url-loader) 模块可以自动根据文件大小，决定是否使用 Data URIs。
 

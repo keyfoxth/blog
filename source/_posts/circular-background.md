@@ -194,7 +194,7 @@ categories: Front-end
 
 ### 总结与不足
 
-为什么一直省略 `background-image` 属性？没错，这里使用了上篇文章介绍的 **Data URIs**，将图片进行 base64 编码后一共 8660Bytes，通过把它写在 CSS 中实现复用，整个 HTML（未经压缩）则 11330Bytes（11.0KB）。
+为什么一直省略 `background-image` 属性？没错，这里使用了上篇文章介绍的 **Data URIs**，将图片进行 base64 编码后一共 8660 Bytes，通过把它写在 CSS 中实现复用，整个 HTML（未经压缩）则 11330 Bytes（11.0 KB）。
 
 当然，这里也还有不足之处。
 
@@ -203,7 +203,7 @@ categories: Front-end
 解决办法有两个：
 
 1. 使用宽高比更大的图片 : )
-2. 将 `.bg, .bg::after` 中的 `width` 设置为 `200 * n（n 为大于1的整数）vh`，让 `background` 平铺过去。注意，不能是其它数或直接使用 `width: 100%;`，因为这样会撕裂 `background`，破坏循环。
+2. 将 `.bg`、`.bg::after` 的 `width` 设置为 `200 * n（n 为大于1的整数）vh`，让 `background` 平铺过去。注意，不能是其它数或直接使用 `width: 100%;`，因为这样会撕裂 `background`，破坏循环。
 
 ---
 
