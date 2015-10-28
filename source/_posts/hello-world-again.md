@@ -1,7 +1,7 @@
 title: Hello world, again.
 date: 2015-10-10 11:35:17
 tags:
-categories: 随笔
+categories: 杂谈
 ---
 
 > 15-10-26 第 3 次更新

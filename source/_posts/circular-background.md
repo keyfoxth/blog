@@ -4,7 +4,7 @@ tags:
 - background
 - Data URIs
 - web
-categories: CSS
+categories: Front-end
 ---
 
 > 15-10-26 第 6 次更新
@@ -59,7 +59,7 @@ categories: CSS
 }
 ```
 
-想要了解更多的相关知识，可以阅读文章末尾的参考链接。
+想要了解更多的相关知识，可以阅读文章末尾的相关链接。
 
 ---
 
@@ -194,7 +194,7 @@ categories: CSS
 
 ### 总结与不足
 
-为什么一直省略 `background-image` 属性？没错，这里使用了上篇文章介绍的 **Data URIs**，将图片进行 base64 编码后一共 8660 字节，通过把它写在 CSS 中实现复用，整个 HTML（未经压缩）则 11330 字节（11.0KB）。
+为什么一直省略 `background-image` 属性？没错，这里使用了上篇文章介绍的 **Data URIs**，将图片进行 base64 编码后一共 8660Bytes，通过把它写在 CSS 中实现复用，整个 HTML（未经压缩）则 11330Bytes（11.0KB）。
 
 当然，这里也还有不足之处。
 
@@ -207,7 +207,7 @@ categories: CSS
 
 ---
 
-### 参考链接
+### 相关链接
 
 1. [CSS Values and Units Module Level 3](https://drafts.csswg.org/css-values-3/#viewport-relative-lengths)
 2. [Viewport Sized Typography | CSS-Tricks](https://css-tricks.com/viewport-sized-typography/)

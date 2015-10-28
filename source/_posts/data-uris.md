@@ -3,16 +3,16 @@ date: 2015-10-13 00:42:39
 tags:
 - Data URIs
 - web
-categories: CSS
+categories: Front-end
 ---
 
-> 15-10-27 第 5 次更新
+> 15-10-28 第 6 次更新
 
 ---
 
 ### 简介
 
-data URIs 由 [RFC 2397](http://tools.ietf.org/html/rfc2397) 定义，允许将一个小文件进行编码后嵌入到另外一个文档里。
+Data URIs 由 [RFC 2397](http://tools.ietf.org/html/rfc2397) 定义，允许将一个小文件进行编码后嵌入到另外一个文档里。
 
 注意：是 `URI` 而不是 `URL`，`URL`（Universal Resource Locator，统一资源定位符）是 `URI`（Universal Resource Identifier，统一资源标识符）的子集。
 
@@ -28,8 +28,8 @@ data URIs 由 [RFC 2397](http://tools.ietf.org/html/rfc2397) 定义，允许将�
 
 > **`Base64`**
 >
-> 由 [RFC 2045](https://www.ietf.org/rfc/rfc2045.txt) 定义的二进制数据表示方法。
-> 简单来说，就是将 3Byte 的数据，转换为 4 个 6bit 单元，每个单元都按照其值，选择 Base64 索引表中对应的字符作为编码后的输出。也就是说，3Byte 的数据经过 Base64 编码后，将增大到 4Byte。
+> 由 [RFC 1421](https://tools.ietf.org/html/rfc1421)、[RFC 2045](https://www.ietf.org/rfc/rfc2045.txt) 定义的二进制数据编码方法。
+> 简单来说，就是将 3Bytes 的数据，转换为 4 个 6bit 单元，每个单元都按照其值，选择 Base64 索引表中对应的字符作为编码后的输出。也就是说，3Bytes 的数据经过 Base64 编码后，将增大到 4Bytes。
 
 <!-- more -->
 
@@ -55,7 +55,7 @@ div {
 window.open("data:text/html;charset=utf-8," +
   encodeURIComponent(
     "<!DOCTYPE html>"+
-    "<html lang="zh-CN">"+
+    "<html>"+
     "<head><title>Hello, world!</title></head>"+
     "<body><h1>Hello, world!</h1></body>"+
     "</html>"
@@ -78,3 +78,19 @@ window.open("data:text/html;charset=utf-8," +
 3. 将 Data URIs 写在 CSS、JavaScript，可以依靠缓存 CSS、JavaScript 文件来缓存 Data URIs。
 
 ### 缺点
+
+1. 因为 Base64 的的实际原理，编码后的数据比原始数据约长 1/3，不过这点可以通过 gzip 等方法改善。
+2. 需要额外的解码、渲染过程，消耗更多资源。
+3. 兼容性问题：例如 IE8 限制 Data URIs 的长度最多为 32768 Bytes。
+
+### 总结
+
+Data URIs 是把双刃剑，有利亦有弊。
+
+最后，推荐一下 webpack，其中的 [url-loader](https://github.com/webpack/url-loader) 模块可以自动根据文件大小，决定是否使用 Data URIs。
+
+### 相关链接
+
+1. [Data URI scheme - Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Data_URI_scheme)
+2. [Data URIs | CSS-Tricks](https://css-tricks.com/data-uris/)
+3. [data URIs - HTTP | MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/data_URIs)
