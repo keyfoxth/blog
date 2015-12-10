@@ -10,13 +10,13 @@ categories: 杂谈
 
 ### 复活
 
-锵锵锵锵~~今天（15-10-10），八云一家又重新建立起来了，鼓掌鼓掌。算是完全复活了呢，可喜可贺可喜可贺。不过并没有把之前的文章转移过来，就当一个新的开始。
+锵锵锵锵~~今天（15-10-10），博客又重新建立起来了，鼓掌鼓掌。算是完全复活了呢，可喜可贺可喜可贺。不过并没有把之前的文章转移过来，就当一个新的开始。
 
 ### 详情
 
-记录目前八云一家的详情：
-+ 八云一家现在部署在 [GitHub Pages](https://pages.github.com/)。
-+ 抛弃了 [WordPress](https://wordpress.org/)，转投 [Hexo](https://hexo.io/) ，使用的主题是 [NexT](https://github.com/iissnan/hexo-theme-next)。同时，八云一家也支持 [RSS](rss2.xml) 输出。
+记录目前博客的详情：
++ 部署在 [GitHub Pages](https://pages.github.com/)。
++ 抛弃了 [WordPress](https://wordpress.org/)，转投 [Hexo](https://hexo.io/) ，使用的主题是 [NexT](https://github.com/iissnan/hexo-theme-next)。同时，也支持 [RSS](rss2.xml) 输出。
 + 用户评论系统使用 [Disqus](https://disqus.com/)。
 + [Google Analytics](https://www.google.com/analytics/) 开启。
 
