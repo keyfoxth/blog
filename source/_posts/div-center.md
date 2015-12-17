@@ -10,7 +10,7 @@ categories: Front-end
 
 ---
 
-直接上 [DEMO](//keyfoxth.github.io/demo/div-center-demo.html)（请使用 Chrome 打开）。
+直接上 [DEMO](//keyfoxth.github.io/demo/div-center.html)（请使用 Chrome 打开）。
 
 每个方法都使用如下格式的结构：
 

@@ -11,7 +11,7 @@ categories: Front-end
 
 ---
 
-不多说，直接上 [DEMO](http://keyfoxth.github.io/demo/circular-background-demo.html)。
+不多说，直接上 [DEMO](http://keyfoxth.github.io/demo/loop-background.html)。
 
 实现的方法很简单，整个 HTML 文件就 2 个 div，`.bg` 承载背景，`.content` 承载文字内容。
 
