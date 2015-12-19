@@ -4,7 +4,7 @@ tags:
 - background
 - Data URIs
 - web
-categories: Front-end
+categories: 前端
 ---
 
 > 15-10-26 第 6 次更新
