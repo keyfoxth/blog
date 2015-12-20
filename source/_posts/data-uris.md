@@ -3,7 +3,7 @@ date: 2015-10-13 00:42:39
 tags:
 - Data URIs
 - web
-categories: Front-end
+categories: 前端
 ---
 
 > 15-10-28 第 6 次更新
