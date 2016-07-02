@@ -1,12 +1,14 @@
 header {
+  width: 100%;
   margin: 1rem auto;
   padding: 0 0 1rem 0;
   overflow: hidden;
 }
-h1 {
+.name {
   font-size: 0;
 }
 .me {
+  display: block;
   position: relative;
   height: 9rem;
   width: 9rem;
@@ -35,16 +37,14 @@ h1 {
   background: linear-gradient(45deg, white 1.1rem, transparent 0), linear-gradient(135deg, white 1.1rem, transparent 0), linear-gradient(to top, rgba(0,0,0,.2), transparent), #edcc60;
   box-shadow: 1.3rem .6rem .5rem -.5rem rgba(0,0,0,.8);
 }
-.my-img {
+.me img {
   display: inline-block;
   margin: .5rem;
   height: 8rem;
   border-radius: 50%;
-  transition: .5s filter, .5s -webkit-filter;
-  -webkit-filter: sepia(1);
-  filter: sepia(1);
+  transition: .5s -webkit-filter;
+  -webkit-filter: sepia(.8) hue-rotate(150deg) blur(1px);
 }
-.my-img:hover {
+.me img:hover {
   -webkit-filter: none;
-  filter: none;
 }

@@ -1,10 +1,9 @@
-import 'babel-polyfill';
-import React from 'react';
-import { render } from 'react-dom';
-import { Router, browserHistory } from 'react-router/es6';
-import routes from './routes';
+import 'babel-polyfill'
+import React from 'react'
+import { render } from 'react-dom'
+import { Router, browserHistory } from 'react-router/es6'
+import routes from './routes'
 
 render(
-  <Router history={browserHistory} routes={routes} />,
-  document.getElementById('app')
-);
+  <Router history={browserHistory} routes={routes} />, document.getElementById('app')
+)

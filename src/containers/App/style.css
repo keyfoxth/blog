@@ -1,4 +1,24 @@
 body {
-  color: #222;
-  font: 100%/1.5 "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans","wenquanyi micro hei","Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif;
+  color: #333;
+  /* font: 100%/1.5 "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans","wenquanyi micro hei","Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif; */
+   font: 100%/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+::-webkit-scrollbar {
+    display: none;
+}
+main {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+/* Animation */
+.animation-enter {
+  opacity: 0;
+  transition: opacity .5s ease-in;
+}
+.animation-enter.animation-enter-active {
+  opacity: 1;
+}
+.animation-leave {
+  display: none;
 }

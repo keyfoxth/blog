@@ -1,0 +1,9 @@
+footer {
+  width: 100%;
+  background: #ccc;
+}
+footer p {
+  max-width: 40rem;
+  margin: 1.5rem auto;
+  text-align: right;
+}
