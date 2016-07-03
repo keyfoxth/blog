@@ -1,5 +1,10 @@
-import React from 'react';
+import React from 'react'
+
+import './style'
 
 export default () => (
-  <p>404</p>
-);
+  <section className="error">
+    <p>404</p>
+    <p>Not Found</p>
+  </section>
+)

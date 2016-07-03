@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router/es6'
-import './style.css'
+
+import './style'
 
 export default () => (
   <section className="home">

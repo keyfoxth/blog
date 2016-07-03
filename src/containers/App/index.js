@@ -1,7 +1,8 @@
 import React, { PropTypes } from 'react'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import 'normalize.css'
-import './style.css'
+
+import './style'
 import Header from 'containers/Header'
 import Footer from 'containers/Footer'
 

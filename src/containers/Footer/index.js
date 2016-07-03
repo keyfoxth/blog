@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
-import './style.css'
+
+import './style'
 
 export default () => (
   <footer>
