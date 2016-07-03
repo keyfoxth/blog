@@ -7,6 +7,10 @@ export default () => (
     <p>Posts</p>
     <section className="posts">
       <Link to="/test"><h2>test</h2></Link>
+      <Link to="/test"><h2>test</h2></Link>
+      <Link to="/test"><h2>test</h2></Link>
+      <Link to="/test"><h2>test</h2></Link>
+      <Link to="/test"><h2>test</h2></Link>
     </section>
   </section>
 )
