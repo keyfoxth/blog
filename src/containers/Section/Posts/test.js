@@ -1,5 +1,5 @@
 import React from 'react';
-import Document from './test.md';
+import Document from './md/test.md';
 import './style.css';
 
 export default () => (

@@ -1,5 +1,7 @@
 .article {
   max-width: 40rem;
   margin: 0 auto 1rem;
-  padding: 0 1em;
+}
+p {
+  word-wrap: break-word;
 }

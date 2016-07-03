@@ -10,6 +10,7 @@ const App = (props) => (
     <Header />
       <ReactCSSTransitionGroup
         component="section"
+        className="containers"
         transitionName="animation"
         transitionEnterTimeout={500}
         transitionLeaveTimeout={500}

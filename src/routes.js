@@ -14,19 +14,19 @@ export default {
     {
       path: '/',
       getComponent(location, callback) {
-        System.import('containers/Page/Home').then(loadRoute(callback)).catch(errorLog)
+        System.import('containers/Section/Home').then(loadRoute(callback)).catch(errorLog)
       }
     },
     {
       path: '/test',
       getComponent(location, callback) {
-        System.import('containers/Page/Test').then(loadRoute(callback)).catch(errorLog)
+        System.import('containers/Section/Posts/test.js').then(loadRoute(callback)).catch(errorLog)
       }
     },
     {
       path: '*',
       getComponent(location, callback) {
-        System.import('containers/Page/404').then(loadRoute(callback)).catch(errorLog)
+        System.import('containers/Section/404').then(loadRoute(callback)).catch(errorLog)
       }
     }
   ]

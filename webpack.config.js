@@ -9,7 +9,7 @@ module.exports = {
   devtool: isProd ? 'hidden-source-map' : 'cheap-eval-source-map',
   context: path.join(__dirname, './src'),
   entry: {
-    app: [ 'app', 'containers/Page/Home' ],
+    app: [ 'app', 'containers/Section/Home' ],
     vendor: [ 'react', 'react-dom' ]
   },
   output: {
@@ -39,7 +39,7 @@ module.exports = {
   },
   postcss: [
     autoprefixer({
-      browsers: [ 'last 2 versions' ] 
+      browsers: [ 'last 2 versions' ]
     })
   ],
   resolve: {

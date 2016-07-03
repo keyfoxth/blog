@@ -1,24 +1,17 @@
-section {
-  flex: 1;
-  max-width: 40rem;
-  margin: 0 auto 1rem;
-  padding: 0 1em;
-  text-align: left;
-  opacity: .95;
-}
-h2 {
+.home p {
   margin: 2rem auto 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
   font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
   text-align: center;
-  letter-spacing: .1rem;
 }
-.articles {
+.posts {
   position: relative;
   border-radius: .5rem;
   overflow: hidden;
   box-shadow: 0 .6rem .5rem -.5rem rgba(0,0,0,.8);
 }
-.articles:before {
+.posts:before {
   content: "";
   position: absolute;
   height: 1.73rem;
@@ -27,7 +20,7 @@ h2 {
   top: 0;
   background: linear-gradient(-150deg, white 1.5rem, transparent 0);
 }
-.articles::after {
+.posts::after {
   content: "";
   position: absolute;
   height: 1.73rem;
@@ -80,7 +73,7 @@ h2 {
 .home a:nth-of-type(6) {
   animation-delay: -10s;
 }
-h3 {
+.posts h2 {
   font-weight: normal;
   text-align: center;
   padding: 0 2rem;

@@ -1,9 +1,15 @@
 footer {
   width: 100%;
+  padding: 1rem 0;
   background: #ccc;
 }
 footer p {
   max-width: 40rem;
-  margin: 1.5rem auto;
+  margin: 0 auto;
+  padding: 0 1rem;
   text-align: right;
+}
+footer a {
+  text-decoration: none;
+  color: white;
 }

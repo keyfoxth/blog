@@ -11,6 +11,16 @@ main {
   flex-flow: column;
   min-height: 100vh;
 }
+.containers {
+  flex: 1;
+  max-width: 40rem;
+  padding: 0 1em;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: left;
+  opacity: .95;
+}
 /* Animation */
 .animation-enter {
   opacity: 0;
