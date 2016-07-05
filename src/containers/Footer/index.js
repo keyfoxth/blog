@@ -5,7 +5,7 @@ import './style'
 
 export default () => (
   <footer>
-    <p>Made with <a href="https://github.com/facebook/react">react</a>.</p>
-    <p>Source code on <a href="https://github.com/keyfoxth/blog">github</a>.</p>
+    <p>Made with <a href="https://github.com/facebook/react" target="_blank">react</a>.</p>
+    <p>Source code on <a href="https://github.com/keyfoxth/blog" target="_blank">github</a>.</p>
   </footer>
 )
