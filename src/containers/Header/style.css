@@ -1,7 +1,7 @@
 header {
   width: 100%;
   margin: 1rem auto;
-  padding: 0 0 1rem 0;
+  padding: 0 0 1rem;
   overflow: hidden;
 }
 .name {
@@ -13,7 +13,7 @@ header {
   height: 9rem;
   width: 9rem;
   margin: 0 auto;
-  background: #ddaa99;
+  background: rgba(29,121,242,1);
   border-radius: 50%;
   box-shadow: 0 .4rem .5rem -.3rem black;
 }
@@ -27,14 +27,14 @@ header {
 }
 .me:before {
   right: 10rem;
-  background: #edcc60;
-  background: linear-gradient(-45deg, white 1.1rem, transparent 0), linear-gradient(-135deg, white 1.1rem, transparent 0), linear-gradient(to top, rgba(0,0,0,.2), transparent), #edcc60;
+  background: rgba(29,141,242,1);
+  background: linear-gradient(-45deg, white 1.1rem, transparent 0), linear-gradient(-135deg, white 1.1rem, transparent 0), linear-gradient(to top, rgba(0,0,0,.2), transparent), rgba(29,141,242,1);
   box-shadow: -1.3rem .6rem .5rem -.5rem rgba(0,0,0,.8);
 }
 .me::after {
   left: 10rem;
-  background: #edcc60;
-  background: linear-gradient(45deg, white 1.1rem, transparent 0), linear-gradient(135deg, white 1.1rem, transparent 0), linear-gradient(to top, rgba(0,0,0,.2), transparent), #edcc60;
+  background: rgba(29,141,242,1);
+  background: linear-gradient(45deg, white 1.1rem, transparent 0), linear-gradient(135deg, white 1.1rem, transparent 0), linear-gradient(to top, rgba(0,0,0,.2), transparent), rgba(29,141,242,1);
   box-shadow: 1.3rem .6rem .5rem -.5rem rgba(0,0,0,.8);
 }
 .me img {

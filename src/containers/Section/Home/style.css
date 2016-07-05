@@ -39,20 +39,51 @@
   text-shadow: 0 1px 1px rgba(255,255,255,.6);
   box-shadow: 0 0 10rem transparent inset;
   transition: .5s color, .5s text-shadow, .5s box-shadow;
-  animation: color 10s both linear;
-  animation-play-state: paused;
 }
 .home a:hover, .home a:focus {
-  color: #fff;
+  color: rgba(255,255,255,1);
   text-shadow: 0 -1px 1px black;
   box-shadow: 0 0 10rem rgba(0,0,0,.4) inset;
 }
+.home a:nth-of-type(1) {
+  background: rgba(29,161,242,1);
+}
+.home a:nth-of-type(2) {
+  background: rgba(29,171,242,1);
+}
+.home a:nth-of-type(3) {
+  background: rgba(29,181,242,1);
+}
+.home a:nth-of-type(4) {
+  background: rgba(29,191,242,1);
+}
+.home a:nth-of-type(5) {
+  background: rgba(29,201,242,1);
+}
+.posts h2 {
+  font-weight: normal;
+  text-align: center;
+  padding: 0 2rem;
+}
+/* Animation pause, not wark at Safari *************************
+****************************************************************
+.home a {
+  display: block;
+  padding: .5rem;
+  text-decoration: none;
+  color: inherit;
+  text-shadow: 0 1px 1px rgba(255,255,255,.6);
+  box-shadow: 0 0 10rem transparent inset;
+  transition: .5s color, .5s text-shadow, .5s box-shadow;
+  animation: color 10s both linear;
+  animation-play-state: paused;
+}
 @keyframes color {
   from {
-    background: #ed9474;
+    background: rgba(29,161,242,1);
   }
   to {
-    background: #edc474;
+    background: rgba(29,221,242,1);
   }
 }
 .home a:nth-of-type(1) {
@@ -73,8 +104,4 @@
 .home a:nth-of-type(6) {
   animation-delay: -10s;
 }
-.posts h2 {
-  font-weight: normal;
-  text-align: center;
-  padding: 0 2rem;
-}
+*/
