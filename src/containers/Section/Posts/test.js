@@ -1,8 +1,8 @@
 import React from 'react'
-import Document from './md/test.md'
+import Post from './md/test.md'
 
-import './style.css'
+import './style'
 
 export default () => (
-  <Document className="article"/>
+  <Post className="post"/>
 )

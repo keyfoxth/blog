@@ -12,7 +12,7 @@ footer p {
 footer a {
   color: rgba(51,51,51,1);
   background: linear-gradient(90deg, gray 66%, transparent 0) repeat-x;
-  background-size: .2rem .2rem;
+  background-size: .4rem .2rem;
   background-position: 0 1.2rem;
   text-decoration: none;
 }
