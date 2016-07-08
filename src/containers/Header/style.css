@@ -45,6 +45,6 @@ header {
   transition: .5s -webkit-filter;
   -webkit-filter: sepia(.8) hue-rotate(150deg) blur(1px);
 }
-.me img:hover {
+.me img:hover, .me img:active {
   -webkit-filter: none;
 }

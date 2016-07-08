@@ -32,8 +32,8 @@ module.exports = {
         }
       },
       {
-        test: /\.md$/,
-        loader: 'babel-loader!reactdown/webpack'
+        test: /\.json$/,
+        loader: 'json'
       }
     ]
   },

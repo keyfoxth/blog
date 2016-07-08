@@ -14,7 +14,7 @@ main {
   flex: 1;
   max-width: 40rem;
   padding: 0 1rem;
-  margin: 0 0 1rem;
+  margin: 0 0 4rem;
   position: relative;
   left: 50%;
   transform: translateX(-50%);

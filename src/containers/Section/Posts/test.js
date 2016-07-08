@@ -1,8 +1,9 @@
 import React from 'react'
-import Post from './md/test.md'
+import ReactMarkdown from 'react-markdown'
 
+import post from 'raw!./md/test.md'
 import './style'
 
 export default () => (
-  <Post className="post"/>
+  <ReactMarkdown source={post} className="post"/>
 )
